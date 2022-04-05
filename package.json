@@ -1,6 +1,6 @@
 {
   "name": "ipmirror.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Javascript implementation of IPMirror API service ( Client side replacement for geoip-lite )",
   "main": "index.js",
   "dependencies": {

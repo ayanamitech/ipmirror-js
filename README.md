@@ -1,8 +1,8 @@
 # ipmirror-js
 
-[![NPM Package Version][https://img.shields.io/npm/v/ipmirror.js.svg]][https://npmjs.org/package/ipmirror.js]
-[![NPM Package Downloads][https://img.shields.io/npm/dm/ipmirror.js.svg]][https://npmjs.org/package/ipmirror.js]
-[![Known Vulnerabilities](https://snyk.io/test/github/ayanamitech/ipmirror.js/badge.svg?style=flat-square)](https://snyk.io/test/github/ayanamitech/ipmirror.js)
+[![NPM Package Version](https://img.shields.io/npm/v/ipmirror.js.svg)](https://npmjs.org/package/ipmirror.js)
+[![NPM Package Downloads](https://img.shields.io/npm/dm/ipmirror.js.svg)](https://npmjs.org/package/ipmirror.js)
+[![Known Vulnerabilities](https://snyk.io/test/github/ayanamitech/ipmirror-js/badge.svg?style=flat-square)](https://snyk.io/test/github/ayanamitech/ipmirror-js)
 [![License: Apache](https://img.shields.io/badge/License-Apache-blue.svg?style=flat-square)](https://www.apache.org/licenses/LICENSE-2.0)
 
 Javascript implementation of IPMirror API service ( Client side replacement for geoip-lite )
@@ -21,7 +21,7 @@ npm install ipmirror.js
 yarn add ipmirror.js
 ```
 
-### Browser / Node.js / React Native
+## Browser / Node.js / React Native
 
 Assuming that you have been used [geoip-lite](https://github.com/geoip-lite/node-geoip) like the following
 
@@ -41,6 +41,8 @@ const queryIps = () => {
     console.log(result);
   });
 }
+
+queryIps();
 ```
 
 To use ipmirror.js, you can create an instance of an object with the new operator, and replace it with a promise style lookup function instead.
@@ -59,9 +61,11 @@ const queryIps = () => {
   // Using ipmirror.dev for default, define your self-hosted instance in the constructor.
   const geoip = new IPMirror();
 
-  ips.map((ip) => {
+  ips.map(async (ip) => {
     const result = await geoip.lookup(ip);
     console.log(result);
   });
 }
+
+queryIps();
 ```
