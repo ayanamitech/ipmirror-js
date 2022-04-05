@@ -1,0 +1,34 @@
+{
+  "name": "ipmirror.js",
+  "version": "1.0.0",
+  "description": "Javascript implementation of IPMirror API service ( Client side replacement for geoip-lite )",
+  "main": "index.js",
+  "dependencies": {
+    "cross-fetch": "^3.1.5"
+  },
+  "devDependencies": {
+    "eslint": "^8.12.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayanamitech/ipmirror-js.git"
+  },
+  "keywords": [
+    "ipmirror",
+    "ipconfig",
+    "ifconfig",
+    "geoip",
+    "geoip-lite"
+  ],
+  "author": "AyanamiTech <ayanami0330@protonmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ayanamitech/ipmirror-js/issues"
+  },
+  "homepage": "https://github.com/ayanamitech/ipmirror-js#readme"
+}
