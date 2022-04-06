@@ -21,7 +21,7 @@ npm install ipmirror.js
 yarn add ipmirror.js
 ```
 
-## Browser / Node.js / React Native
+## Node.js / React Native
 
 Assuming that you have been used [geoip-lite](https://github.com/geoip-lite/node-geoip) like the following
 
@@ -68,4 +68,40 @@ const queryIps = () => {
 }
 
 queryIps();
+```
+
+## Browser
+
+You can import `ipmirror.js` using jsDelivr CDN
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/ipmirror.js@latest/dist/ipmirror.js"></script>
+```
+
+Or you could alternatively use UNPKG CDN as well
+
+```html
+<script src="https://unpkg.com/ipmirror.js@latest/dist/ipmirror.js"></script>
+```
+
+### Usage
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/ipmirror.js@latest/dist/ipmirror.js"></script>
+    <script>
+      const init = async () => {
+        const ipmirror = new IPMirror();
+        const example = await ipmirror.lookup('8.8.8.8');
+        document.getElementById("result-query").textContent = JSON.stringify(example, undefined, 2);
+      };
+      init();
+    </script>
+  </head>
+  <body>
+    <h2>IP Query</h2><pre id="result-query">Waiting for data</pre><br>
+  </body>
+</html>
 ```
