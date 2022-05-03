@@ -91,6 +91,9 @@ Or you could alternatively use UNPKG CDN as well
 <html>
   <head>
     <script src="https://cdn.jsdelivr.net/npm/ipmirror.js@latest/dist/ipmirror.js"></script>
+  </head>
+  <body>
+    <h2>IP Query</h2><pre id="result-query">Waiting for data</pre><br>
     <script>
       const init = async () => {
         const ipmirror = new IPMirror();
@@ -99,9 +102,6 @@ Or you could alternatively use UNPKG CDN as well
       };
       init();
     </script>
-  </head>
-  <body>
-    <h2>IP Query</h2><pre id="result-query">Waiting for data</pre><br>
   </body>
 </html>
 ```
